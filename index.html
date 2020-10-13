@@ -1,0 +1,81 @@
+<!--
+  Tasks:
+    1) Include 'style.css', 'print.css', 'script.js' and 'libs/jquery-3.1.0.js'.
+    2) Add an empty contacts table (id: 'contacts-table') with the
+       columns 'ID', 'First name', 'Last name', 'Email' and 'Action'.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Address Book</title>
+
+    <!-- Remove code. To be implemented by candidate. -->
+    <!-- Start Task 1 -->
+    <link rel='stylesheet' href='style.css'/>
+    <link rel='stylesheet' href='print.css' media="print"/>
+
+    <script src="libs/jquery-3.1.0.js"></script>
+    <!-- End Task 1 -->
+  </head>
+  <body>
+      <h1 id="contacts-headline">Contacts</h1>
+
+      <!-- Remove code. To be implemented by candidate. -->
+      <!-- Start Task 2 -->
+      <!-- adress book table -->
+      <table id="contacts-table">
+          <thead>
+              <th>ID</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Email</th>
+              <th>Action</th>
+          </thead>
+          <tbody>
+              <!-- adress book entries -->
+          </tbody>
+      </table>
+      <!-- End Task 2 -->
+
+      <hr/>
+
+      <form id="contacts-form">
+          <!-- first name input field -->
+          <div class="item text">
+              <label>First name:</label>
+              <div class="field"><input type="text" name="first_name" /></div>
+          </div>
+
+          <!-- last name input field -->
+          <div class="item text">
+              <label>Last name:</label>
+              <div class="field"><input type="text" name="last_name" /></div>
+          </div>
+
+          <!-- email input field -->
+          <div class="item text">
+              <label>Email:</label>
+              <div class="field"><input type="text" name="email" /></div>
+          </div>
+
+          <!-- discard and save buttons -->
+          <div class="button-wrapper">
+              <div class="item button button-default">
+                  <div class="field"><input type="submit" id="contacts-btn-save" value="Save" /></div>
+              </div>
+              <div class="item button">
+                  <div class="field"><input type="button" id="contacts-btn-discard" value="Discard" /></div>
+              </div>
+          </div>
+      </form>
+
+      <!-- Remove code. To be implemented by candidate. -->
+      <!-- Start Task 1 -->
+      <script src="script.js"></script>
+      <!-- End Task 1 -->
+  </body>
+</html>
