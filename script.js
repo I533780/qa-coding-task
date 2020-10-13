@@ -1,11 +1,3 @@
-/*
-  Tasks:
-    1) Implement method 'Contacts.storeAdd'.
-    2) Implement method 'Contacts.tableAdd' (append entry row to table).
-    3) Implement method 'Contacts.storeRemove'.
-    4) Implement method 'Contacts.tableRemove'.
-    5) Optional: Sort contact entries by name.
-*/
 (function(){
     "use strict";
 
@@ -39,21 +31,15 @@
          * Saves the given contact entry in the store.
          *****************************************************************************/
         storeAdd: function(entry) {
-            /* Remove code. To be implemented by candidate. */
-            /* Start Task 1 */
             Contacts.store.push(entry);
-            /* End Task 1 */
         },
         /*****************************************************************************
          * Removes the given contact entry from the store.
          *****************************************************************************/
         storeRemove: function(entry) {
-            /* Remove code. To be implemented by candidate. */
-            /* Start Task 3 */
             Contacts.store = jQuery.grep(Contacts.store, function(contact) {
                 return contact.id !== entry.id;
             });
-            /* End Task 3 */
         },
 
         /*****************************************************************************
@@ -83,20 +69,14 @@
             );
 
             // Add the contact entry (row) to the table.
-            /* Remove code. To be implemented by candidate. */
-            /* Start Task 2 */
             Contacts.$table.find("tbody").append($entry_row);
-            /* End Task 2 */
         },
 
         /*****************************************************************************
          * Removes the given entry from the contacts table.
          *****************************************************************************/
         tableRemove: function(entry) {
-            /* Remove code. To be implemented by candidate. */
-            /* Start Task 4 */
             jQuery("#entry-" + entry.id).remove();
-            /* End Task 4 */
         },
 
         /*****************************************************************************
@@ -138,18 +118,10 @@
             if(matched_entries.length !== 1)
                 return;
 
-            var entry = matched_entries[0],
-                confirm_msg = 'Are you sure you want to remove "' +
-                              entry.first_name +
-                              ' ' +
-                              entry.last_name +
-                              '" from your contacts?';
-
+            var entry = matched_entries[0]
             // Remove contact entry after confirmation
-            if ( confirm(confirm_msg) ) {
-                Contacts.storeRemove(entry);
-                Contacts.tableRemove(entry);
-            }
+            Contacts.storeRemove(entry);
+            Contacts.tableRemove(entry);
         }
     };
 
